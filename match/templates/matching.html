@@ -1,12 +1,69 @@
 {% extends "base.html" %}
-{% load humanize %}
+{% load static%}
 
 {% block main %}
-<h1>自己紹介</h1>
-<h2>実績</h2>
-<p>{%now "Y年m月d日H時i分"%}現在までに100人と交流しました！</p>
-<h2>国</h2>
-<ul>
-<p>アメリカ、フランス</p>
-</ul>
+<div class="my-div-style">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'matching.css' %}">
+    <title>掲示板</title>
+</head>
+<body>
+    <header class="header" text-align="center">
+        <h1>people who want to meet!</h1>
+    </header>
+    <!-- 最初の掲示板エントリ -->
+    <div class="entry" display="flax">
+        <div class="flag">
+            <a href="{% url 'match:zaseki' %}">
+            <img src="{%static 'america_flag.png'%}" alt="アメリカの国旗" width="20%" height="20%" align="left">
+            </a>
+        </div>
+        <div class="text">
+            <p>名前: John</p>
+            <p>言語: 英語</p>
+            <p>メンバー: 3人</p>
+            <p>コメント: #LoveJapan #Student</p>
+        </div>
+    </div>
+    <p>---------------------------------------------------------------------------------------------</p>
+    <!-- 別の掲示板エントリ -->
+    <div class="entry" display="flax">
+        <div class="flag">
+            <img src="{%static 'uk_flag.png'%}" width="20%" height="20%" align="left">
+        </div>
+        <div class="text">
+            <p>名前: George</p>
+            <p>言語: 英語,日本語</p>
+            <p>メンバー: 2人</p>
+            <p>コメント: #LoveFrance #Traveler</p>
+        </div>
+    </div>
+    <p>---------------------------------------------------------------------------------------------</p>
+    <div class="entry" display="flax">
+        <div class="flag">
+            <img src="{%static 'france_flag.png'%}" alt="フランスの国旗" width="20%" height="20%" align="left">
+        </div>
+        <div class="text">
+            <p>名前: Floriane</p>
+            <p>言語: フランス語</p>
+            <p>メンバー: 3人</p>
+            <p>コメント: #LoveFrance #Traveler</p>
+        </div>
+    </div>
+    <p>---------------------------------------------------------------------------------------------</p>
+    <div class="entry" display="flax">
+        <div class="flag">
+            <img src="{%static 'german_flag.png'%}" alt="ドイツの国旗" width="20%" height="20%" align="left">
+        </div>
+        <div class="text">
+            <p>名前: Adam</p>
+            <p>言語: ドイツ語</p>
+            <p>メンバー: 5人</p>
+            <p>コメント: #LoveFrance #Traveler</p>
+        </div>
+    </div>
+</body>
+</div>
 {% endblock %}

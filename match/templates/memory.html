@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static%}
+
+{% block main %}
+<div class="my-div-style">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="memory.css">
+    <link rel="stylesheet" href="{% static 'memory.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -22,4 +25,6 @@
         Twitterはこちら
     </a>
 </body>
-</html>
+
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+.entry {
+    display: flex; /* flexboxを使用して要素を横に配置 */
+    align-items: center; /* 要素を垂直方向に中央揃え */
+    margin-bottom: 20px; /* エントリ間の余白を追加（オプション） */
+}
+.flag img {
+    max-width: 700px; /* 国旗の最大幅を設定 */
+    height: auto; /* 高さを自動調整 */
+    margin-right: 10px; /* 国旗とテキスト間の余白を追加 */
+}
+.text {
+    flex: 1; /* テキストエリアが残りの幅を占めるように */
+}
+h1{
+    text-align:center
+}

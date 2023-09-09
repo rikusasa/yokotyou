@@ -1,0 +1,19 @@
+.world_map {
+    float: right;
+    margin-left: 10px;
+    vertical-align: top;
+}
+h2 {
+    font-size: 50px;
+}
+li {
+    list-style: none;
+    font-size: 30px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

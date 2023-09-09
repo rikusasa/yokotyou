@@ -1,20 +1,16 @@
 from django.views.generic import TemplateView
+from django.views import generic
+import logging
+
+from django.contrib import messages
+from django.urls import reverse_lazy
 
 
 class IndexView(TemplateView):
-    template_name = "index.html"
+    template_name = "memory.html"
 
-    def get_context_data(self):
-        ctxt = super().get_context_data()
-        ctxt["username"]="太郎"
-        return ctxt
+class MatchingView(TemplateView):
+    template_name = "matching.html"
 
-
-class AboutView(TemplateView):
-    template_name = "about.html"
-
-    def get_context_data(self):
-        ctxt = super().get_context_data()
-        ctxt["num_survices"]="123456789"
-        ctxt["skills"] = ["Python", "C++", "Java", "Go"]
-        return ctxt
+class MatchingView(TemplateView):
+    template_name = "matching.html"
